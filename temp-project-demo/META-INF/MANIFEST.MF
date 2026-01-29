@@ -1,0 +1,38 @@
+Manifest-Version: 1.0
+Main-Class: com.temp.demo.Application
+Class-Path: aspose-font-21.10.jar lombok-1.18.8.jar snakeyaml-1.23.jar j
+ ackson-dataformat-xml-2.9.9.jar aspose-html-21.6-jdk11.jar gluegen-rt-2
+ .3.2-natives-linux-amd64.jar aspose-words-21.10-shaping-harfbuzz-plugin
+ .jar gluegen-rt-2.3.2-natives-windows-amd64.jar fresh-common-1.0.0.jar 
+ jackson-annotations-2.9.0.jar aspose-slides-21.10-jdk16.jar spring-cont
+ ext-support-5.1.9.RELEASE.jar jogl-all-2.3.2-natives-linux-amd64.jar on
+ nxruntime-1.8.1.jar gluegen-rt-2.3.2-natives-macosx-universal.jar lwjgl
+ -3.2.1-natives-windows.jar aspose-pdf-21.10-jdk17.jar gluegen-rt-2.3.2.
+ jar aspose-omr-19.12.jar aspose-page-21.10.jar slf4j-api-1.7.25.jar glu
+ egen-rt-2.3.2-natives-linux-i586.jar gluegen-rt-main-2.3.2.jar logback-
+ classic-1.2.3.jar aspose-ocr-21.10.jar aspose-cad-21.8.jar jogl-all-2.3
+ .2-natives-windows-i586.jar spring-beans-5.1.9.RELEASE.jar commons-code
+ c-1.11.jar jogl-all-2.3.2-natives-android-armv6.jar jackson-databind-2.
+ 9.9.3.jar aspose-pub-20.8.jar jogl-all-main-2.3.2.jar gluegen-rt-2.3.2-
+ natives-windows-i586.jar jackson-module-jaxb-annotations-2.9.9.jar jack
+ son-dataformat-yaml-2.9.9.jar validation-api-2.0.1.Final.jar gluegen-rt
+ -2.3.2-natives-linux-armv6hf.jar spring-expression-5.1.9.RELEASE.jar jo
+ gl-all-2.3.2-natives-solaris-i586.jar java-jwt-3.8.0.jar spring-context
+ -5.1.9.RELEASE.jar lwjgl-3.2.1.jar aspose-note-21.9-jdk17.jar gluegen-r
+ t-2.3.2-natives-android-aarch64.jar gluegen-rt-2.3.2-natives-android-ar
+ mv6.jar gluegen-rt-2.3.2-natives-solaris-amd64.jar spring-core-5.1.9.RE
+ LEASE.jar aspose-tex-21.9.jar spring-web-5.1.9.RELEASE.jar jogl-all-2.3
+ .2-natives-macosx-universal.jar jogl-all-2.3.2-natives-linux-armv6.jar 
+ woodstox-core-5.1.0.jar aspose-psd-21.7-jdk16.jar aspose-imaging-21.10-
+ jdk16.jar jogl-all-2.3.2.jar spring-jcl-5.1.9.RELEASE.jar logback-core-
+ 1.2.3.jar stax2-api-3.1.4.jar gluegen-rt-2.3.2-natives-linux-armv6.jar 
+ jogl-all-2.3.2-natives-windows-amd64.jar jackson-datatype-jdk8-2.9.9.ja
+ r jogl-all-2.3.2-natives-solaris-amd64.jar mybatis-3.5.2.jar jackson-da
+ tatype-jsr310-2.9.9.jar aspose-tasks-21.10-jdk18.jar aspose-cells-21.10
+ .jar aspose-email-21.9-jdk16.jar aspose-barcode-21.10-jdk18.jar jogl-al
+ l-2.3.2-natives-linux-armv6hf.jar aspose-diagram-21.10-jdk16.jar spring
+ -aop-5.1.9.RELEASE.jar gluegen-rt-2.3.2-natives-solaris-i586.jar aspose
+ -3d-21.10.jar jogl-all-2.3.2-natives-android-aarch64.jar jackson-core-2
+ .9.9.jar lwjgl-vulkan-3.2.1.jar aspose-words-21.10-jdk17.jar jogl-all-2
+ .3.2-natives-linux-i586.jar
+
