@@ -1,11 +1,11 @@
-package com.temp.test;
+package com.temp.yui;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.ComponentScan;
 
 @SpringBootApplication
-@ComponentScan({"com.temp.test", "com.fresh.common.exception"})
+@ComponentScan({"com.temp.yui", "com.fresh.common.exception"})
 public class Application {
 
     public static void main(String[] args) {
