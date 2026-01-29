@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.temp.test.mapper.DepMapper">
+
+    <!-- insert的通用写法有两种，主要区别在于对有默认值的字段的表现 -->
+    <insert id="insert">
+        insert into `dep`(
+        id
+        <if test="depName != null">, dep_name</if>
+        <if test="depNo != null">, dep_no</if>
+        <if test="orgId != null and orgId != ''">, org_id</if>
+        <if test="depType != null">, dep_type</if>
+        <if test="createTime != null">, create_time</if>
+        <if test="modifyTime != null">, modify_time</if>
+        ) values (
+        #{id, javaType=long}
+        <if test="depName != null">, #{depName}</if>
+        <if test="depNo != null">, #{depNo}</if>
+        <if test="orgId != null and orgId != ''">, #{orgId}</if>
+        <if test="depType != null">, #{depType}</if>
+        <if test="createTime != null">, #{createTime}</if>
+        <if test="modifyTime != null">, #{modifyTime}</if>
+        )
+    </insert>
+
+    <delete id="deleteById">
+        delete from `dep` where id = #{id, javaType=long}
+    </delete>
+
+    <delete id="deleteByOrgId">
+        delete from `dep` where org_id = #{orgId}
+    </delete>
+
+    <!-- update的通用写法只有一种，即判断不为null即更新。对于要将字段更新成null不适用 -->
+    <update id="updateById">
+        update `dep` set id = id
+        <if test="depName != null">, dep_name = #{depName}</if>
+        <if test="depNo != null">, dep_no = #{depNo}</if>
+        <if test="orgId != null">, org_id = #{orgId}</if>
+        <if test="depType != null">, dep_type = #{depType}</if>
+        <if test="createTime != null">, create_time = #{createTime}</if>
+        <if test="modifyTime != null">, modify_time = #{modifyTime}</if>
+        where id = #{id, javaType=long}
+    </update>
+
+    <select id="selectById" resultType="com.temp.test.entity.Dep">
+        select id, dep_name as depName, dep_no as depNo, org_id as orgId, dep_type as depType,
+               create_time as createTime, modify_time as modifyTime
+        from `dep`
+        where id = #{id, javaType=long};
+    </select>
+
+
+    <select id="listByEntity" resultType="com.temp.test.entity.Dep">
+        select id, dep_name as depName, dep_no as depNo, org_id as orgId, dep_type as depType,
+               create_time as createTime, modify_time as modifyTime
+        from `dep`
+        where 1=1
+        <if test="entity != null">
+            <if test="entity.depName != null"> and dep_name = #{entity.depName}</if>
+            <if test="entity.depNo != null"> and dep_no = #{entity.depNo}</if>
+            <if test="entity.orgId != null"> and org_id = #{entity.orgId}</if>
+            <if test="entity.depType != null"> and dep_type = #{entity.depType}</if>
+        </if>
+    </select>
+
+    <select id="listByEntityForTest" resultType="com.temp.test.entity.Dep">
+        select id, dep_name as depName, dep_no as depNo, org_id as orgId, dep_type as depType,
+        create_time as createTime, modify_time as modifyTime
+        from `dep`
+        where 1=1
+    </select>
+
+
+</mapper>
