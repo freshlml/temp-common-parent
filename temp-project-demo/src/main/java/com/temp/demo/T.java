@@ -12,7 +12,7 @@ import java.util.stream.IntStream;
 
 public class T {
 
-    public static <E> void main(Date argv[]) {
+    public static <E> void main(Date[] argv) {
         int l = 0x9e3779b9;
         for(;;) {
             System.out.println(l = l + l);
@@ -27,7 +27,7 @@ public class T {
         //cutBytes("中".getBytes(), 3);
         //cutBytes("中".getBytes(), 4);
         //cutBytes("中?".getBytes(), 4);
-        byte[] bytes = "中𝕆fkdsfskdf中".getBytes();
+        byte[] bytes = "中𝕆fkdsfskdf中".getBytes();  //file.encoding 配置值(一般为 UTF-8) or iso-8859-1
         System.out.println(cutBytes(bytes, 100));
 
         byte[] bytes2 = new byte[17];
@@ -163,7 +163,7 @@ public class T {
      *
      * @param bytes the specified bytes
      * @param reservedLength the max reserved length
-     * @return a%20a.md new created non-null byte-array
+     * @return a new created non-null byte-array
      * @throws NullPointerException if the specified bytes is null
      * @throws IllegalArgumentException if the specified reservedLength is less {@code 0}
      */
