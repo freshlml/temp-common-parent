@@ -9,29 +9,29 @@ import java.util.*;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.ConcurrentMap;
 
-public class Arty<T> {
+public class ArrTra<T> {
     T[] t;
 
     public static void main(String[] argv) {
 
-        Arty<?> result = Arty.result();
+        ArrTra<?> result = ArrTra.result();
 
-        Arty.a(new int[] {1, 2, 3, 4, 5});
+        ArrTra.a(new int[] {1, 2, 3, 4, 5});
 
-        Arty.a(new int[][] {{1, 2}, {3, 4, 5}});
+        ArrTra.a(new int[][] {{1, 2}, {3, 4, 5}});
 
-        Arty.a(new Integer[] {1, 2, 3, 4, 5});
+        ArrTra.a(new Integer[] {1, 2, 3, 4, 5});
 
-        Arty.a(new A[] {new A(), new A()});
+        ArrTra.a(new A[] {new A(), new A()});
 
-        Arty.a(new A[][] {new A[1], new A[2]});
+        ArrTra.a(new A[][] {new A[1], new A[2]});
 
         int[] a = new int[0];
         System.out.println(a);
     }
 
-    public static <U> Arty<U> result() {
-        return new Arty<>();
+    public static <U> ArrTra<U> result() {
+        return new ArrTra<>();
     }
 
     static <U> void b(U[] ua) {
