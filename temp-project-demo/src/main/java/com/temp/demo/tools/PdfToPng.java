@@ -1,4 +1,4 @@
-package com.temp.demo;
+package com.temp.demo.tools;
 
 
 import com.aspose.pdf.Document;
@@ -15,11 +15,11 @@ import java.nio.file.Files;
 import java.util.ArrayList;
 import java.util.List;
 
-public class PdfToPngTest {
+public class PdfToPng {
     static String path = "F:\\temp";
 
     public static void main(String[] argv) {
-        InputStream pdfIs = PdfToPngTest.class.getClassLoader().getResourceAsStream("memo-493.pdf");
+        InputStream pdfIs = PdfToPng.class.getClassLoader().getResourceAsStream("memo-493.pdf");
 
         File imgFile = new File(path + "\\1.png");
         pdfToImage(pdfIs, imgFile);
