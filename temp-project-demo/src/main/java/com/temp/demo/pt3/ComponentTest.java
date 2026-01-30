@@ -1,15 +1,15 @@
 package com.temp.demo.pt3;
 
 
-import com.temp.demo.pt1.clazz.ClazzComponent;
-import com.temp.demo.pt1.clazz.DefaultClazzComponentResolver;
+import com.temp.demo.component.clazz.ClazzComponent;
+import com.temp.demo.component.clazz.DefaultClazzComponentResolver;
 import sun.misc.Unsafe;
 
 import java.io.Serializable;
 import java.lang.reflect.Field;
 import java.util.List;
 
-public class Temp {
+public class ComponentTest {
 
     public static void main(String[] argv) throws Exception {
 
@@ -39,21 +39,21 @@ public class Temp {
         f.setAccessible(true);
         Unsafe unsafe = (Unsafe) f.get(null);
 
-        long offset = unsafe.objectFieldOffset(Temp.class.getDeclaredField("i"));
+        long offset = unsafe.objectFieldOffset(ComponentTest.class.getDeclaredField("i"));
         System.out.println(offset);
 
-        offset = unsafe.objectFieldOffset(Temp.class.getDeclaredField("j"));
+        offset = unsafe.objectFieldOffset(ComponentTest.class.getDeclaredField("j"));
         System.out.println(offset);
 
-        offset = unsafe.objectFieldOffset(Temp.class.getDeclaredField("b"));
+        offset = unsafe.objectFieldOffset(ComponentTest.class.getDeclaredField("b"));
         System.out.println(offset);
 
         System.out.println(unsafe.arrayBaseOffset(short[][].class));
         System.out.println(unsafe.arrayIndexScale(short[][].class));
         System.out.println("-----------------------------------------------");
 
-        Temp temp = new Temp();
-        long xOffset = unsafe.objectFieldOffset(Temp.class.getDeclaredField("x"));
+        ComponentTest componentTest = new ComponentTest();
+        long xOffset = unsafe.objectFieldOffset(ComponentTest.class.getDeclaredField("x"));
         new Thread(() -> {
             try {
                 Thread.sleep(3000);
@@ -61,7 +61,7 @@ public class Temp {
                 e.printStackTrace();
             }
             System.out.println("update begin...");
-            temp.x = 1;
+            componentTest.x = 1;
             //unsafe.putInt(temp, xOffset, 1);
             try {
                 Thread.sleep(1000);
@@ -71,13 +71,13 @@ public class Temp {
         }).start();
 
         int i = 0;
-        while(unsafe.getInt(temp, xOffset) == 0) {
+        while(unsafe.getInt(componentTest, xOffset) == 0) {
             if(i == 0) {
                 System.out.println("running begin...");
                 i = 1;
             }
         }
-        System.out.println("running end..." + temp.x);
+        System.out.println("running end..." + componentTest.x);
     }
     private int x;
 
