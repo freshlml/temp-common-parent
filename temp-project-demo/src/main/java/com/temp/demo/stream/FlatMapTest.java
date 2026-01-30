@@ -1,11 +1,11 @@
-package com.temp.demo.flat;
+package com.temp.demo.stream;
 
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
 import java.util.stream.Collectors;
 
-public class FlatTest {
+public class FlatMapTest {
 
     public static void main(String[] argv) {
 
@@ -27,7 +27,7 @@ public class FlatTest {
         flatPojos.add(l3);
 
         List<Pojo> nestedLstOne = flatPojos.stream().map(lst -> lst.get(0)).collect(Collectors.toList());
-        System.out.println(nestedLstOne.get(1));  //a a.md
+        System.out.println(nestedLstOne.get(1));  //Pojo{ a a.md }
 
         List<Pojo> result = flatPojos.stream()
                 .filter(lst -> lst.get(0).s.equals("1"))
@@ -35,7 +35,7 @@ public class FlatTest {
                 .distinct()
                 .collect(Collectors.toList());
 
-        System.out.println(result);
+        System.out.println(result);  //[Pojo{ 1 }, Pojo{ 2 }, Pojo{ d }]
     }
 
     static class Pojo {
