@@ -1,4 +1,4 @@
-package com.temp.demo;
+package com.temp.demo.pt2;
 
 import java.io.File;
 import java.io.FileOutputStream;
@@ -17,19 +17,20 @@ public class CreateFile {
             file.mkdirs();
         }
         long start = System.currentTimeMillis();
-        for(int i=0;i<1;i++){
-            String fileName = "auto-test1"+i;
-            File f = new File(filePath,fileName);
+        for(int i=0; i < 1; i++){
+            String fileName = "auto-test1" + i;
+            File f = new File(filePath, fileName);
             if(!f.exists()){
                 createFile(f,30000000000l);
             }
         }
         long end = System.currentTimeMillis();
-        System.out.println("total times "+(end-start));
+        System.out.println("total times " + (end - start));
+
         start = System.currentTimeMillis();
-        for(int i=0;i<1;i++){
-            String fileName = "auto-test2"+i;
-            File f = new File(filePath,fileName);
+        for(int i=0; i < 1; i++){
+            String fileName = "auto-test2" + i;
+            File f = new File(filePath, fileName);
             if(!f.exists()){
                 createFixLengthFile(f,30000000000l);
             }
@@ -38,7 +39,7 @@ public class CreateFile {
         System.out.println("total times "+(end-start));
     }
 
-    public static void createFixLengthFile(File file, long length) throws IOException{
+    public static void createFixLengthFile(File file, long length) throws IOException {
         FileOutputStream fos = null;
         FileChannel output = null;
         try {
@@ -59,16 +60,16 @@ public class CreateFile {
         }
     }
 
-    private static void createFile(File file, long length) throws IOException{
+    private static void createFile(File file, long length) throws IOException {
         RandomAccessFile ff = null;
-        try{
+        try {
             ff = new RandomAccessFile(file,"rw");
             ff.setLength(length);
-        }finally{
-            if (ff != null){
-                try{
+        } finally {
+            if (ff != null) {
+                try {
                     ff.close();
-                }catch(Exception e){
+                } catch(Exception e) {
                     e.printStackTrace();
                 }
             }
