@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.fresh.temp.yui.mapper.OrgMapper">
+
+    <insert id="insert">
+        insert into `org` (
+            id
+            <if test="orgName != null">, org_name</if>
+            <if test="orgCommissionMoney != null">, org_commission_money</if>
+            <if test="createTime != null">, create_time</if>
+            <if test="modifyTime != null">, modify_time</if>
+        ) values (
+            #{id, javaType=long}
+            <if test="orgName != null">, #{orgName}</if>
+            <if test="orgCommissionMoney != null">, #{orgCommissionMoney}</if>
+            <if test="createTime != null">, #{createTime}</if>
+            <if test="modifyTime != null">, #{modifyTime}</if>
+        )
+    </insert>
+
+    <delete id="deleteById">
+        delete from `org` where id = #{id, javaType=long}
+    </delete>
+
+    <update id="updateById">
+        update `org` set id = id
+            <if test="orgName != null">, org_name = #{orgName}</if>
+            <if test="orgCommissionMoney != null">, org_commission_money = #{orgCommissionMoney}</if>
+            <if test="createTime != null">, create_time = #{createTime}</if>
+            <if test="modifyTime != null">, modify_time = #{modifyTime}</if>
+        where id = #{id, javaType=long}
+    </update>
+
+    <select id="selectById" resultType="com.fresh.temp.yui.entity.Org">
+        select id, org_name as orgName, org_commission_money as orgCommissionMoney,
+               create_time as createTime, modify_time as modifyTime
+        from `org`
+        where id = #{id, javaType=long}
+    </select>
+
+
+</mapper>
