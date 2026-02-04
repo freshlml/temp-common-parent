@@ -1,8 +1,8 @@
 package com.fresh.temp.yui.controller;
 
-import com.fresh.common.result.JsonResult;
-import com.fresh.common.result.PageJsonResultVo;
-import com.fresh.common.utils.AssertUtils;
+import com.fresh.core.result.JsonResult;
+import com.fresh.core.result.PageJsonResultVo;
+import com.fresh.core.utils.AssertUtils;
 import com.fresh.xy.mb.core.Page;
 import com.fresh.xy.mb.utils.IdGenerator;
 import com.fresh.xy.mb.utils.PageUtils;

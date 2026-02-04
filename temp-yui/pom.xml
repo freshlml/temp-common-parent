@@ -18,6 +18,7 @@
 
         <fresh-core.version>1.0.0</fresh-core.version>
         <xy-mybatis-starter.version>1.0.0</xy-mybatis-starter.version>
+        <xy-common.version>1.0.0</xy-common.version>
     </properties>
 
     <profiles>
@@ -119,6 +120,12 @@
             <groupId>com.fresh</groupId>
             <artifactId>fresh-core</artifactId>
             <version>${fresh-core.version}</version>
+        </dependency>
+        <!-- xy-common -->
+        <dependency>
+            <groupId>com.fresh.xy</groupId>
+            <artifactId>xy-common</artifactId>
+            <version>${xy-common.version}</version>
         </dependency>
         <!-- xy-mybatis-starter -->
         <dependency>
