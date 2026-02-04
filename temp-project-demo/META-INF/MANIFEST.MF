@@ -1,5 +1,5 @@
 Manifest-Version: 1.0
-Main-Class: com.temp.demo.Application
+Main-Class: com.temp.d.Application
 Class-Path: aspose-font-21.10.jar lombok-1.18.8.jar snakeyaml-1.23.jar j
  ackson-dataformat-xml-2.9.9.jar aspose-html-21.6-jdk11.jar gluegen-rt-2
  .3.2-natives-linux-amd64.jar aspose-words-21.10-shaping-harfbuzz-plugin
