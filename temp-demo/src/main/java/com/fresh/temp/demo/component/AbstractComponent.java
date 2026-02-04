@@ -1,6 +1,6 @@
 package com.fresh.temp.demo.component;
 
-import com.fresh.common.utils.AssertUtils;
+import com.fresh.core.utils.AssertUtils;
 
 import java.util.ArrayList;
 import java.util.List;

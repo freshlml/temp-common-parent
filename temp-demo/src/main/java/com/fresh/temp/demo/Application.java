@@ -1,6 +1,6 @@
 package com.fresh.temp.demo;
 
-import com.fresh.common.utils.ScanUtils;
+import com.fresh.core.utils.ScanUtils;
 
 import java.net.URL;
 import java.net.URLClassLoader;

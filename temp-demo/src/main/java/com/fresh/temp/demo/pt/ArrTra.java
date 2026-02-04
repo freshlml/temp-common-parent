@@ -1,6 +1,6 @@
 package com.fresh.temp.demo.pt;
 
-import com.fresh.common.utils.ObjectUtils;
+import com.fresh.core.utils.ObjectUtils;
 import sun.misc.Unsafe;
 
 import java.lang.reflect.Array;
