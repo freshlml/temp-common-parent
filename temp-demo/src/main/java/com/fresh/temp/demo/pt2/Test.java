@@ -1,7 +1,7 @@
 package com.fresh.temp.demo.pt2;
 
 
-public class A {
+public class Test {
 
     public static void main(String[] args) {
         int[] a = {1, 2, -11, 123, 1, 3, -122};
