@@ -1,9 +1,9 @@
 package com.fresh.temp.demo.tools;
 
 
-/*import com.aspose.pdf.Document;
+import com.aspose.pdf.Document;
 import com.aspose.pdf.devices.JpegDevice;
-import com.aspose.pdf.devices.Resolution;*/
+import com.aspose.pdf.devices.Resolution;
 import javax.imageio.ImageIO;
 import java.awt.*;
 import java.awt.image.BufferedImage;
@@ -26,7 +26,7 @@ public class PdfToPng {
     }
 
     static void pdfToImage(InputStream inputStream, File imgFile) {
-        /*List<File> fileList = new ArrayList<>();
+        List<File> fileList = new ArrayList<>();
 
         try {
             long old = System.currentTimeMillis();
@@ -62,7 +62,7 @@ public class PdfToPng {
             for (File f : fileList) {
                 f.delete();
             }
-        }*/
+        }
     }
 
     static BufferedImage mergeImage(boolean isHorizontal, List<BufferedImage> imgs) {
