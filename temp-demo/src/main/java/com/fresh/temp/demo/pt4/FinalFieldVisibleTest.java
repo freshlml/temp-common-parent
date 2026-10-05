@@ -1,7 +1,6 @@
 package com.fresh.temp.demo.pt4;
 
 
-import lombok.SneakyThrows;
 
 public class FinalFieldVisibleTest {
 
