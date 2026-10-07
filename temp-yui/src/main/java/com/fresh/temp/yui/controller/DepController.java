@@ -45,6 +45,8 @@ public class DepController {
         dep.setDepNo(depDto.getDepNo());
         dep.setOrgId(depDto.getOrgId());
         dep.setDepType(depDto.getDepType());
+        //dep.setCreateTime(depDto.getCreateTime());
+        //dep.setModifyTime(depDto.getModifyTime());
 
         depService.save(dep);
         return JsonResult.buildSuccessResult("添加成功");
